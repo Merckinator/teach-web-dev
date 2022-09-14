@@ -6,25 +6,55 @@
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>Simple Website</title>
     <link rel="stylesheet" href="./style.css">
+    <script defer src="https://unpkg.com/alpinejs@3.x.x/dist/cdn.min.js"></script>
     <!-- <link rel="icon" href="./favicon.ico" type="image/x-icon"> -->
   </head>
   <body>
     <div class="main-wrapper">
       <main>
-        <h1>Welcome</h1>
-        <p>This is the beginning of a simple website to be used as a teaching tool.</p>
-        <h3>Plan - (Rough Draft)</h3>
-        <ol>
-          <li>HTML is the content;</li>
-          <li>CSS is the presentation;</li>
-          <li>JS handles the actions.</li>
+        <div class="welcome">
+          <h1>Welcome</h1>
+          <p>This is the beginning of a simple website to be used as a teaching tool.</p>
+        </div>
+        <div class="plan">
+          <h3>Plan - (Rough Draft)</h3>
+          <ol>
+            <li>HTML is the content;</li>
+            <li>CSS is the presentation;</li>
+            <li>JS handles the actions.</li>
+              <ul>
+                <li>
+                  Alpine.js for simple interactivity.
+                </li>
+              </ul>
+          </ol>
+        </div>
+        <div x-data="{ show: false }">
+          <button x-on:click="show = !show">Show External Resources</button>
+          <div class="resources" x-show="show" x-transition>
+            <h3>External Resources</h3>
             <ul>
               <li>
-                Consider a simple JS framework or toolkit to avoid having to manually
-                manipulate the DOM.
+                Python book: 
+                <a href="https://automatetheboringstuff.com" target="_blank">
+                  Automate the Boring Stuff with Python
+                </a>
+              </li>
+              <li>
+                Online development environment:
+                <a href="https://replit.com" target="_blank">
+                  Replit
+                </a>
+              </li>
+              <li>
+                Fun math/programming problems:
+                <a href="https://projecteuler.net" target="_blank">
+                  Project Euler
+                </a>
               </li>
             </ul>
-        </ol>
+          </div>
+        </div>
       </main>
     </div>
 	<!-- <script src="index.js"></script> -->
