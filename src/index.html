@@ -16,7 +16,7 @@
           <h1>Welcome</h1>
           <p>This is the beginning of a simple website to be used as a teaching tool.</p>
         </div>
-        <div class="plan">
+        <div class="card">
           <h3>Plan - (Rough Draft)</h3>
           <ol>
             <li>HTML is the content;</li>
@@ -31,29 +31,31 @@
         </div>
         <div x-data="{ show: false }">
           <button x-on:click="show = !show">Show External Resources</button>
-          <div class="resources" x-show="show" x-transition>
-            <h3>External Resources</h3>
-            <ul>
-              <li>
-                Python book: 
-                <a href="https://automatetheboringstuff.com" target="_blank">
-                  Automate the Boring Stuff with Python
-                </a>
-              </li>
-              <li>
-                Online development environment:
-                <a href="https://replit.com" target="_blank">
-                  Replit
-                </a>
-              </li>
-              <li>
-                Fun math/programming problems:
-                <a href="https://projecteuler.net" target="_blank">
-                  Project Euler
-                </a>
-              </li>
-            </ul>
-          </div>
+          <template x-if="show">
+            <div class="card" x-transition>
+              <h3>External Resources</h3>
+              <ul>
+                <li>
+                  Python book: 
+                  <a href="https://automatetheboringstuff.com" target="_blank">
+                    Automate the Boring Stuff with Python
+                  </a>
+                </li>
+                <li>
+                  Online development environment:
+                  <a href="https://replit.com" target="_blank">
+                    Replit
+                  </a>
+                </li>
+                <li>
+                  Fun math/programming problems:
+                  <a href="https://projecteuler.net" target="_blank">
+                    Project Euler
+                  </a>
+                </li>
+              </ul>
+            </div>
+          </template>
         </div>
       </main>
     </div>
