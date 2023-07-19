@@ -1,27 +1,39 @@
 <!DOCTYPE html>
 <html lang="en">
   <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
     <title>Simple Website</title>
-    <link rel="stylesheet" href="./style.css">
+    <link rel="stylesheet" href="./style.css" />
     <!-- <link rel="icon" href="./favicon.ico" type="image/x-icon"> -->
-    <script defer src="https://unpkg.com/alpinejs@3.x.x/dist/cdn.min.js"></script>
+    <script
+      defer
+      src="https://unpkg.com/alpinejs@3.x.x/dist/cdn.min.js"
+    ></script>
   </head>
   <body>
+    <nav>
+      <a href="./index.html">Home</a>
+      <a href="./counter.html">Counter</a>
+      <a href="./canvas.html">Canvas</a>
+    </nav>
     <p>
-        Following along with 
-        <a href="https://alpinejs.dev/start-here#building-a-counter" target="_blank">the tutorial</a>
-         for Alpine.js.
+      Following along with
+      <a
+        href="https://alpinejs.dev/start-here#building-a-counter"
+        target="_blank"
+        >the tutorial</a
+      >
+      for Alpine.js.
     </p>
     <div x-data="{ count: 0 }">
-        <p>A simple counter that can be incremented or decremented.</p>
-        <button x-on:click="count++">Increment</button>
-     
-        <span x-text="count"></span>
+      <p>A simple counter that can be incremented or decremented.</p>
+      <button x-on:click="count++">Increment</button>
 
-        <button x-on:click="count--">Decrement</button>
+      <span x-text="count"></span>
+
+      <button x-on:click="count--">Decrement</button>
     </div>
   </body>
 </html>

@@ -1,20 +1,31 @@
 <!DOCTYPE html>
 <html lang="en">
   <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
     <title>Simple Website</title>
-    <link rel="stylesheet" href="./style.css">
-    <script defer src="https://unpkg.com/alpinejs@3.x.x/dist/cdn.min.js"></script>
+    <link rel="stylesheet" href="./style.css" />
+    <script
+      defer
+      src="https://unpkg.com/alpinejs@3.x.x/dist/cdn.min.js"
+    ></script>
     <!-- <link rel="icon" href="./favicon.ico" type="image/x-icon"> -->
   </head>
   <body>
     <div class="main-wrapper">
+      <nav>
+        <a href="./index.html">Home</a>
+        <a href="./counter.html">Counter</a>
+        <a href="./canvas.html">Canvas</a>
+      </nav>
       <main>
         <div class="welcome">
           <h1>Welcome</h1>
-          <p>This is the beginning of a simple website to be used as a teaching tool.</p>
+          <p>
+            This is the beginning of a simple website to be used as a teaching
+            tool.
+          </p>
         </div>
         <div class="card">
           <h3>Plan - (Rough Draft)</h3>
@@ -22,11 +33,9 @@
             <li>HTML is the content;</li>
             <li>CSS is the presentation;</li>
             <li>JS handles the actions.</li>
-              <ul>
-                <li>
-                  Alpine.js for simple interactivity.
-                </li>
-              </ul>
+            <ul>
+              <li>Alpine.js for simple interactivity.</li>
+            </ul>
           </ol>
         </div>
         <div x-data="{ show: false }">
@@ -36,16 +45,14 @@
               <h3>External Resources</h3>
               <ul>
                 <li>
-                  Python book: 
+                  Python book:
                   <a href="https://automatetheboringstuff.com" target="_blank">
                     Automate the Boring Stuff with Python
                   </a>
                 </li>
                 <li>
                   Online development environment:
-                  <a href="https://replit.com" target="_blank">
-                    Replit
-                  </a>
+                  <a href="https://replit.com" target="_blank"> Replit </a>
                 </li>
                 <li>
                   Fun math/programming problems:
@@ -55,9 +62,7 @@
                 </li>
                 <li>
                   Learn and solve programming problems:
-                  <a href="https://leetcode.com" target="_blank">
-                    LeetCode
-                  </a>
+                  <a href="https://leetcode.com" target="_blank"> LeetCode </a>
                 </li>
               </ul>
             </div>
@@ -65,6 +70,6 @@
         </div>
       </main>
     </div>
-	<!-- <script src="index.js"></script> -->
+    <!-- <script src="index.js"></script> -->
   </body>
 </html>
