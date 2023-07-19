@@ -13,27 +13,29 @@
     ></script>
   </head>
   <body>
-    <nav>
-      <a href="./index.html">Home</a>
-      <a href="./counter.html">Counter</a>
-      <a href="./canvas.html">Canvas</a>
-    </nav>
-    <p>
-      Following along with
-      <a
-        href="https://alpinejs.dev/start-here#building-a-counter"
-        target="_blank"
-        >the tutorial</a
-      >
-      for Alpine.js.
-    </p>
-    <div x-data="{ count: 0 }">
-      <p>A simple counter that can be incremented or decremented.</p>
-      <button x-on:click="count++">Increment</button>
+    <main>
+      <nav>
+        <a href="./index.html">Home</a>
+        <a href="./counter.html">Counter</a>
+        <a href="./canvas.html">Canvas</a>
+      </nav>
+      <p>
+        Following along with
+        <a
+          href="https://alpinejs.dev/start-here#building-a-counter"
+          target="_blank"
+          >the tutorial</a
+        >
+        for Alpine.js.
+      </p>
+      <div x-data="{ count: 0 }">
+        <p>A simple counter that can be incremented or decremented.</p>
+        <button x-on:click="count++">Increment</button>
 
-      <span x-text="count"></span>
+        <span x-text="count"></span>
 
-      <button x-on:click="count--">Decrement</button>
-    </div>
+        <button x-on:click="count--">Decrement</button>
+      </div>
+    </main>
   </body>
 </html>

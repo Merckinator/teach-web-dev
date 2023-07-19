@@ -2,7 +2,7 @@ body {
   background-color: lightgray;
 }
 
-.main-wrapper {
+main {
   margin: 5% auto;
   max-width: fit-content;
 

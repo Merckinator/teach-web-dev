@@ -13,63 +13,61 @@
     <!-- <link rel="icon" href="./favicon.ico" type="image/x-icon"> -->
   </head>
   <body>
-    <div class="main-wrapper">
+    <main>
       <nav>
         <a href="./index.html">Home</a>
         <a href="./counter.html">Counter</a>
         <a href="./canvas.html">Canvas</a>
       </nav>
-      <main>
-        <div class="welcome">
-          <h1>Welcome</h1>
-          <p>
-            This is the beginning of a simple website to be used as a teaching
-            tool.
-          </p>
-        </div>
-        <div class="card">
-          <h3>Plan - (Rough Draft)</h3>
-          <ol>
-            <li>HTML is the content;</li>
-            <li>CSS is the presentation;</li>
-            <li>JS handles the actions.</li>
+      <div class="welcome">
+        <h1>Welcome</h1>
+        <p>
+          This is the beginning of a simple website to be used as a teaching
+          tool.
+        </p>
+      </div>
+      <div class="card">
+        <h3>Plan - (Rough Draft)</h3>
+        <ol>
+          <li>HTML is the content;</li>
+          <li>CSS is the presentation;</li>
+          <li>JS handles the actions.</li>
+          <ul>
+            <li>Alpine.js for simple interactivity.</li>
+          </ul>
+        </ol>
+      </div>
+      <div x-data="{ show: false }">
+        <button x-on:click="show = !show">Show External Resources</button>
+        <template x-if="show">
+          <div class="card" x-transition>
+            <h3>External Resources</h3>
             <ul>
-              <li>Alpine.js for simple interactivity.</li>
+              <li>
+                Python book:
+                <a href="https://automatetheboringstuff.com" target="_blank">
+                  Automate the Boring Stuff with Python
+                </a>
+              </li>
+              <li>
+                Online development environment:
+                <a href="https://replit.com" target="_blank"> Replit </a>
+              </li>
+              <li>
+                Fun math/programming problems:
+                <a href="https://projecteuler.net" target="_blank">
+                  Project Euler
+                </a>
+              </li>
+              <li>
+                Learn and solve programming problems:
+                <a href="https://leetcode.com" target="_blank"> LeetCode </a>
+              </li>
             </ul>
-          </ol>
-        </div>
-        <div x-data="{ show: false }">
-          <button x-on:click="show = !show">Show External Resources</button>
-          <template x-if="show">
-            <div class="card" x-transition>
-              <h3>External Resources</h3>
-              <ul>
-                <li>
-                  Python book:
-                  <a href="https://automatetheboringstuff.com" target="_blank">
-                    Automate the Boring Stuff with Python
-                  </a>
-                </li>
-                <li>
-                  Online development environment:
-                  <a href="https://replit.com" target="_blank"> Replit </a>
-                </li>
-                <li>
-                  Fun math/programming problems:
-                  <a href="https://projecteuler.net" target="_blank">
-                    Project Euler
-                  </a>
-                </li>
-                <li>
-                  Learn and solve programming problems:
-                  <a href="https://leetcode.com" target="_blank"> LeetCode </a>
-                </li>
-              </ul>
-            </div>
-          </template>
-        </div>
-      </main>
-    </div>
+          </div>
+        </template>
+      </div>
+    </main>
     <!-- <script src="index.js"></script> -->
   </body>
 </html>
