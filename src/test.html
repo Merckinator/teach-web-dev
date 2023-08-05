@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html>
+  <body style="background-color: orange">
+    <h1>Test!</h1>
+    <p style="color: red">This is a test!</p>
+
+    <input id="userName" type="text" placeholder="Enter your name" />
+    <select id="numberOfTimes">
+      <option value="1">One</option>
+      <option value="2">Two</option>
+    </select>
+    <button id="button">Click Here!</button>
+
+    <ol
+      style="
+        background-color: white;
+        width: 100px;
+        border: 5px dotted purple;
+        border-radius: 50px;
+      "
+    >
+      <li>Item 1</li>
+      <li>Item 2</li>
+    </ol>
+
+    <canvas
+      id="test"
+      height="400px"
+      width="500px"
+      style="background-color: gray"
+    ></canvas>
+    <script>
+      const canvas = document.getElementById("test");
+      const ctx = canvas.getContext("2d");
+
+      ctx.beginPath();
+      ctx.arc(20, 40, 10, 0, Math.PI * 2);
+      ctx.fillStyle = "red";
+      ctx.fill();
+      ctx.closePath();
+
+      ctx.beginPath();
+      ctx.rect(120, 200, 30, 40);
+      ctx.fillStyle = "purple";
+      ctx.fill();
+      ctx.closePath();
+    </script>
+
+    <script>
+      const button = document.getElementById("button");
+      const userName = document.getElementById("userName");
+      const dropdown = document.getElementById("numberOfTimes");
+      button.addEventListener("click", () => {
+        alert(
+          userName.value + " clicked the button " + dropdown.value + " times!"
+        );
+      });
+    </script>
+  </body>
+</html>
